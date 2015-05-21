@@ -15,8 +15,9 @@ function request_callback($response, $info) {
 	if (preg_match("~<title>(.*?)</title>~i", $response, $out)) {
 		$title = $out[1];
 	}
-	echo "<b>$title</b><br />";
-	print_r($info);
+	echo (isset($title)) ? "<b>$title</b><br />" : "NO TITLE<br />";
+	print_r($info); echo "<br />";
+    echo $info['http_code']."<br />";
 	echo "<hr>";
 }
 
@@ -25,8 +26,9 @@ require("RollingCurl.php");
 // single curl request
 echo "Single Request<br />";
 $rc = new RollingCurl("request_callback");
-$rc->request("http://www.msn.com");
+$rc->request("http://www.msn.com/myspecialpageformeonly");
 $rc->execute();
+exit;
 
 // another single curl request
 echo "Another Single Request<br />";
