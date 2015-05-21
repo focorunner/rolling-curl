@@ -1,10 +1,10 @@
 <?php
-
-// Authored by Josh Fraser (www.joshfraser.com)
-// Released under Apache License 2.0
-// Maintained by Alexander Makarov, http://rmcreative.ru/
-
-// $Id$
+/*
+Authored by Josh Fraser (www.joshfraser.com)
+Released under Apache License 2.0
+Maintained by Alexander Makarov, http://rmcreative.ru/
+$Id$
+*/
 
 // Class that represents a single curl request
 
