@@ -13,7 +13,6 @@ abstract class RollingCurlGroupRequest extends RollingCurlRequest
 
  // Set group for this request
  // @param group The group to be set
-
  function setGroup($group)
  {
   if (!($group instanceof RollingCurlGroup))
@@ -23,7 +22,6 @@ abstract class RollingCurlGroupRequest extends RollingCurlRequest
  }
 
  // Process the request
-
  function process($output, $info)
  {
   if ($this->group)
@@ -31,7 +29,6 @@ abstract class RollingCurlGroupRequest extends RollingCurlRequest
  }
 
  // @return void
-
  public function __destruct()
  {
   unset($this->group);
@@ -52,7 +49,6 @@ class RollingCurlGroup
  }
 
  // @return void
-
  public function __destruct()
  {
   unset($this->name, $this->num_requests, $this->finished_requests, $this->requests);
@@ -138,4 +134,3 @@ class GroupRollingCurl extends RollingCurl
  }
 
 }
-
